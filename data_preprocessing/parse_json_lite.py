@@ -38,7 +38,7 @@ with open(fileN, 'r') as f:
         data.append(json.loads(line))
 
 def remove_emoticons(text):
-    emoticon_pattern = re.compile(u'(' + u'|'.join(k for k in EMOTICONS) + u')')
+    emoticon_pattern = re.compile(u'(' + u'|'.join(k for k in EMOTICONS_EMO) + u')')
     return emoticon_pattern.sub(r'', text)
 
 def remove_emoji(text):
